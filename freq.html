@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+        <Page Title>
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <p id="data"></p>
+    <p id="dita"></p>
+    <script>
+        var sekpara = new Date().getSeconds();
+        document.getElementById("data").innerHTML = sekpara;
+        function sekonds() {
+            var sek = new Date().getSeconds();
+                document.getElementById("data").innerHTML = sek;
+                window.location="https://google.com";
+            }
+            setInterval(sekonds, 3000)
+
+    </script>
+</body>
+
+</html>
