@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <h2>Temperatura nga <b>Celcius ne F</b></h2>
+    <style>
+        .form {
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="form">
+        <input type="number" placeholder="temperatura ne C" id="temperatura" style="margin: 5px;">
+        <button type="button" onclick="kelvintemp()" style="margin: 5px;">Llogarit</button>
+    </form>
+    <p id="mes"></p>
+    <script>
+        function kelvintemp() {
+            var cTemp = Number(document.getElementById("temperatura").value);
+            var shuma = cTemp * 9 / 5 + 32
+            document.getElementById("mes").innerHTML = shuma;
+          
+       
+        if ( shuma > 100) {
+            alert("shuma esht tejkaluar")
+        }
+        else if( shuma <15){
+            alert("vishu trashe")
+        }
+  }
+    </script>
+</body>
+
+</html>

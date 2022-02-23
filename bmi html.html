@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <style>
+        .form {
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="form">
+        <input type="number" placeholder="gjatesia" id="height" style="margin: 5px;">
+        <input type="number" placeholder="pesha" id="weight" style="margin: 5px;">
+        <button type="button" onclick="bmi()" style="margin: 5px;">Llogarit</button>
+    </form>
+    <p id="mes"></p>
+    <script>
+        function bmi() {
+            var weight = Number(document.getElementById("weight").value);
+            var height = Number(document.getElementById("height").value);
+            var shuma = weight / (height * height)
+            document.getElementById("mes").innerHTML = shuma;
+            if (shuma < 18.5) {
+                alert("Nenpeshe")
+            }
+            else if (shuma >= 18.5 && shuma <= 25) {
+                alert("Normal")
+            }
+            else if (shuma >25 && shuma <=30) {
+                alert("mbipeshe")
+            }
+            else{
+                alert("shume mbipeshe")
+            }
+        }
+    </script>
+</body>
+
+</html>

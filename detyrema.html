@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div id="data" style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: blueviolet;"></div>
+    <div id="dita"></div>
+    <div id="muaji"></div>
+    <script>
+        var data = new Date();
+
+        var dita = data.getDay();
+        var vlera;
+        switch (dita) {bv 
+            case 0:
+                vlera = "e diele";
+                break;
+            case 1:
+                vlera = "e hene";
+                break;
+            case 2:
+                vlera = "e marte";
+                break;
+            case 3:
+                vlera = "e merkure";
+                break;
+            case 4:
+                vlera = "e enjte";
+                break;
+            case 5:
+                vlera = "e premte";
+                break;
+            default:
+                vlera = "e shtune";
+                break;
+        }
+        var muaji = data.getMonth();
+        var value;
+        switch (muaji) {
+            case 0:
+                value = "janar";
+                break;
+            case 1:
+                value = "shkurt";
+                break;
+            case 2:
+                value = "mars";
+                break;
+
+            default:
+                break;
+        }
+        document.getElementById("dita").innerHTML = vlera
+        document.getElementById("muaji").innerHTML = value
+        document.getElementById("data").innerHTML = value + ("/") + data.getDate() + ("/") + data.getFullYear() + ("/") + data.getHours()+ (":") + data.getMinutes() + (":") + data.getSeconds();
+    </script>
+</body>
+
+</html>
